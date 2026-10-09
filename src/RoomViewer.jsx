@@ -58,7 +58,7 @@ export default function RoomViewer({ wallColor }) {
     tick()
 
     let disposed = false
-    new GLTFLoader().load('/game-room.glb', (gltf) => {
+    new GLTFLoader().load(`${import.meta.env.BASE_URL}game-room.glb`, (gltf) => {
       if (disposed) return
       let wallMesh
       gltf.scene.traverse((o) => {
